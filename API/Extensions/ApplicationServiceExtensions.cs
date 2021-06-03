@@ -13,19 +13,22 @@ namespace API.Extensions
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration config)
         {
- services.AddSwaggerGen(c =>
+            services.AddSwaggerGen(c =>
+                       {
+                           c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
+                       });
+
+            services.AddDbContext<DataContext>(options =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
-            });
-            
-            services.AddDbContext<DataContext>(options =>{
                 options.UseSqlite(config.GetConnectionString("DefaultConnection"));
             });
 
-            services.AddCors(options=>{
-                options.AddPolicy("CorsPolicy", policy=>
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy", policy =>
                 {
-                    policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:3000");
+                    //policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:3000");
+                    policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
                 });
             });
 
