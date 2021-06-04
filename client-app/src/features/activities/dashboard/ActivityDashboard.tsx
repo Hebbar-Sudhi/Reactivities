@@ -15,6 +15,7 @@ interface Props {
   openForm: (id: string) => void;
   closeForm: () => void;
   saveForm: (activity: Activity) => void;
+  submitting:boolean
 }
 
 function ActivityDashboard(props: Props) {
@@ -25,6 +26,7 @@ function ActivityDashboard(props: Props) {
           activities={props.activities}
           selectActivity={props.selectActivity}
           deleteActivity={props.deleteActivity}
+          submitting={props.submitting}
         />
       </Grid.Column>
       <Grid.Column width="6">
@@ -41,6 +43,7 @@ function ActivityDashboard(props: Props) {
             activity={props.selectedActivity}
             closeForm={props.closeForm}
             saveForm={props.saveForm}
+            submitting={props.submitting}
           />
         )}
       </Grid.Column>
