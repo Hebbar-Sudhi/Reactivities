@@ -7,11 +7,11 @@ const sleep = (delay: number) => {
   });
 };
 
-axios.defaults.baseURL = "http://localhost:5000/api";
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 
 axios.interceptors.response.use(async (response) => {
   try {
-    await sleep(1500);
+    if (process.env.NODE_ENV === 'development') await sleep(1500);
     return response;
   } catch (error) {
     console.log(error);
