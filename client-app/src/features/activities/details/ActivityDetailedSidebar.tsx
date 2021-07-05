@@ -8,11 +8,11 @@ export default observer(function ActivityDetailedSidebar() {
     <>
       <Segment
         textAlign="center"
-        style={{ border: "none" }}
+        style={{ border: "none", background:"#01ABAA", color:"white" }}
         attached="top"
         secondary
         inverted
-        color="teal"
+        
       >
         3 People Going
       </Segment>
@@ -20,8 +20,7 @@ export default observer(function ActivityDetailedSidebar() {
         <List relaxed divided>
           <Item style={{ position: "relative" }}>
             <Label
-              style={{ position: "absolute" }}
-              color="orange"
+              style={{ position: "absolute", background: "#EB6B40", color: "white" }}
               ribbon="right"
             >
               Host
@@ -31,7 +30,7 @@ export default observer(function ActivityDetailedSidebar() {
               <Item.Header as="h3">
                 <Link to={`#`}>Hebbar</Link>
               </Item.Header>
-              <Item.Extra style={{ color: "orange" }}>Following</Item.Extra>
+              <Item.Extra style={{ color: "#EEAA7B" }}>Following</Item.Extra>
             </Item.Content>
           </Item>
 
@@ -41,7 +40,7 @@ export default observer(function ActivityDetailedSidebar() {
               <Item.Header as="h3">
                 <Link to={`#`}>Tom</Link>
               </Item.Header>
-              <Item.Extra style={{ color: "orange" }}>Following</Item.Extra>
+              <Item.Extra style={{ color: "#EEAA7B" }}>Following</Item.Extra>
             </Item.Content>
           </Item>
 

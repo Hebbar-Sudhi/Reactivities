@@ -4,7 +4,7 @@ import { Button, Header, Item, Segment, Image } from "semantic-ui-react";
 import { Activity } from "../../../app/models/Activity";
 
 const activityImageStyle = {
-  filter: "brightness(30%)",
+  filter: "brightness(50%)",
 };
 
 const activityImageTextStyle = {
@@ -48,9 +48,9 @@ export default observer(function ActivityDetailedHeader({ activity }: Props) {
         </Segment>
       </Segment>
       <Segment clearing attached="bottom">
-        <Button color="teal">Join Activity</Button>
-        <Button>Cancel attendance</Button>
-        <Button color="orange" floated="right">
+        <Button style={{ background: "#3B945E", color: "white" }}>Join Activity</Button>
+        <Button style={{ background: "#6B6E70", color: "white" }}>Cancel attendance</Button>
+        <Button style={{ background: "#EB6B40", color: "white" }} floated="right">
           Manage Event
         </Button>
       </Segment>

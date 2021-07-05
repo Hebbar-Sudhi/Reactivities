@@ -36,7 +36,7 @@ function ActivityListItem({ activity }: Props) {
         <Button
           as={Link}
           to={`/activities/${activity.id}`}
-          color="blue"
+          style={{background:"#416A59", color:"white"}}
           floated="right"
           content="View"
         />

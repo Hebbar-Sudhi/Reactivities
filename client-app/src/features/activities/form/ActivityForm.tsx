@@ -59,8 +59,8 @@ export default observer(function ActivityForm() {
   if (initialLoading) return <LoadingIndicator content="Loading activity..." />;
 
   return (
-    <Segment clearing>
-      <Form onSubmit={handleSubmit} autoComplete="off">
+    <Segment clearing style={{background:"#F2F2F2"}}>
+      <Form onSubmit={handleSubmit} autoComplete="off" >
         <Form.Field>
           <label>Title</label>
           <input
@@ -119,11 +119,18 @@ export default observer(function ActivityForm() {
         <Button
           loading={loading}
           floated="right"
-          positive
           type="submit"
           content="Submit"
+          style={{ background: "#636B46", color: "white" }}
         />
-        <Button as={Link} to='/activities' floated="right" type="button" content="Cancel" />
+        <Button
+          as={Link}
+          to="/activities"
+          floated="right"
+          type="button"
+          content="Cancel"
+          style={{ background: "#AF473C", color: "white" }}
+        />
       </Form>
     </Segment>
   );

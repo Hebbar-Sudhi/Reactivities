@@ -1,12 +1,11 @@
 body {
-  background-color: #e6e6fa !important;
+  background-color: #c0b3a0 !important;
 }
 
 .react-calendar {
   width: 100%;
   border: none;
   box-shadow: 0 1px 2 px 0 rgba(34, 36, 38, 0.15);
-  background: teal;
 }
 
 .ui.inverted.top.fixed.menu {
@@ -18,16 +17,26 @@ body {
   ) !important;
 }
 
+/*
+.ui.inverted.top.fixed.menu {
+  background-image: linear-gradient(
+    135deg,
+    rgb(24, 42, 115) 0%,
+    rgb(33, 138, 174) 69%,
+    rgb(32, 167, 172) 89%
+  ) !important;
+}*/
+
 /*home page styles*/
 
 .masthead {
   display: flex;
   align-items: center;
   background-image: linear-gradient(
-          135deg,
-          rgb(24, 42, 115) 0%,
-          rgb(33, 138, 174) 69%,
-          rgb(32, 167, 172) 89%
+    135deg,
+    rgb(148, 97, 142) 0%,
+    rgb(110, 54, 103) 69%,
+    rgb(73, 39, 72) 89%
   ) !important;
   height: 100vh;
 }
@@ -48,7 +57,6 @@ body {
 }
 
 /*end home page styles*/
-        
 
 /*
 .ui.menu {

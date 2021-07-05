@@ -20,7 +20,7 @@ function NavBar() {
           <Button
             as = {NavLink}
             to = '/createActivity'
-            positive
+            style={{background:'#B4DBC0'}}
             content="Create Activity"
           />
         </Menu.Item>

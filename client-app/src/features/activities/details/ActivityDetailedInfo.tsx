@@ -13,7 +13,7 @@ export default observer(function ActivityDetailedInfo({ activity }: Props) {
       <Segment attached="top">
         <Grid>
           <Grid.Column width={1}>
-            <Icon size="large" color="teal" name="info" />
+            <Icon size="large" style={{color:"#373F27"}} name="info" />
           </Grid.Column>
           <Grid.Column width={15}>
             <p>{activity.description}</p>
@@ -23,7 +23,7 @@ export default observer(function ActivityDetailedInfo({ activity }: Props) {
       <Segment attached>
         <Grid verticalAlign="middle">
           <Grid.Column width={1}>
-            <Icon name="calendar alternate outline" size="large" color="teal" />
+            <Icon name="calendar alternate outline" size="large" style={{color:"#373F27"}} />
           </Grid.Column>
           <Grid.Column width={15}>
             <span>{activity.date}</span>
@@ -33,7 +33,7 @@ export default observer(function ActivityDetailedInfo({ activity }: Props) {
       <Segment attached>
         <Grid verticalAlign="middle">
           <Grid.Column width={1}>
-            <Icon name="map marker alternate" size="large" color="teal" />
+            <Icon name="map marker alternate" size="large" style={{color:"#373F27"}} />
           </Grid.Column>
           <Grid.Column width={11}>
             <span>

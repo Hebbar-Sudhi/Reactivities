@@ -6,7 +6,7 @@ export default function ActivityFilters() {
   return (
     <>
       <Menu vertical size="large" style={{ width: "100%", marginTop: 27 }}>
-        <Header icon="filter" attached color="teal" content="Filters" />
+        <Header icon="filter" attached content="Filters" style={{color:"#E14658"}} />
         <Menu.Item content="All Activities" />
         <Menu.Item content="I'm going" />
         <Menu.Item content="I'm hosting" />
