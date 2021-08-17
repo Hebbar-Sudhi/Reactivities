@@ -1,12 +1,12 @@
 import { observer } from "mobx-react-lite";
-import React, { ChangeEvent, useState } from "react";
+import React, { useState } from "react";
 import { useEffect } from "react";
 import { Link, useHistory, useParams } from "react-router-dom";
 import { Button, Header, Segment } from "semantic-ui-react";
 import LoadingIndicator from "../../../app/layout/LoadingIndicator";
 import { useStore } from "../../../app/stores/store";
 import { v4 as uuid } from "uuid";
-import { Formik, Form, Field } from "formik";
+import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import MyTextInput from "../../../app/Common/Form/MyTextInput";
 import MyTextArea from "../../../app/Common/Form/MyTextArea";
@@ -70,7 +70,7 @@ export default observer(function ActivityForm() {
 
   return (
     <Segment clearing style={{ background: "#F2F2F2" }}>
-      <Header content='Activity Details' sub color='teal'/>
+      <Header content="Activity Details" sub color="teal" />
       <Formik
         validationSchema={validationSchema}
         enableReinitialize
@@ -97,7 +97,7 @@ export default observer(function ActivityForm() {
               dateFormat="MMMM d, yyyy h:mm aa"
             />
 
-            <Header content='Location Details' sub color='teal'/>
+            <Header content="Location Details" sub color="teal" />
             <MyTextInput placeholder="City" name="city" />
 
             <MyTextInput placeholder="Venue" name="venue" />
