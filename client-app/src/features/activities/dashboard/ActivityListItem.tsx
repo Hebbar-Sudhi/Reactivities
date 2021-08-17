@@ -1,3 +1,4 @@
+import { format } from "date-fns";
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button, Icon, Item, Segment } from "semantic-ui-react";
@@ -8,7 +9,6 @@ interface Props {
 }
 
 function ActivityListItem({ activity }: Props) {
-
   return (
     <Segment.Group>
       <Segment>
@@ -26,7 +26,8 @@ function ActivityListItem({ activity }: Props) {
       </Segment>
       <Segment>
         <span>
-          <Icon name="calendar alternate outline" /> {activity.date}
+          <Icon name="calendar alternate outline" />{" "}
+          {format(activity.date!, "dd MMM yyyy h:mm aa")}
           <Icon name="map marker alternate" /> {activity.venue}
         </span>
       </Segment>
@@ -36,7 +37,7 @@ function ActivityListItem({ activity }: Props) {
         <Button
           as={Link}
           to={`/activities/${activity.id}`}
-          style={{background:"#416A59", color:"white"}}
+          style={{ background: "#416A59", color: "white" }}
           floated="right"
           content="View"
         />

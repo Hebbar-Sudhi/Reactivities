@@ -33,7 +33,7 @@ axios.interceptors.response.use(
         if (data.errors) {
           const modalStateErrors = [];
           for (const key in data.errors) {
-            if (data.errrors[key]) {
+            if (data.errors[key]) {
               modalStateErrors.push(data.errors[key]);
             }
           }
